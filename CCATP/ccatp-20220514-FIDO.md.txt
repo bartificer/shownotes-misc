@@ -1,0 +1,45 @@
+# CCATP — Why FIDO Passkeys Rock (14 May 2022)
+
+This week the FIDO Alliance announced that they had partnered with Apple, Google & Microsoft as well as the W3C to develop a new standard to allow secure and convenient password-less authentication on the web and in apps. The project is driven by two complimentary aims — to remove the pain-points that are preventing the current FIDO2 and WebAuthn standards from gaining main-stream adoption, and to make phishing much more difficult.
+
+It's important to note that what was announced was not a finished product, but an agreed specification and a commitment from the three major OS vendors to implement it this year. A lot of the practical details remain to be worked out, but there's a lot to be learned from we do know already, and it paints a picture rosy picture!
+
+## How we got to Now
+
+To understand the pain-points being addressed, we need to take a step back to look at FIDO's evolution over time, and why it's growth has been steady, but not exponential.
+
+Before the FIDO Alliance there were proprietary hardware tokens and dongles of various kinds, and they either required the human to transcribe things, pretended to be a regular input device like a keyboard, or required custom drivers. These early dongles were only adopted by people and organisations with a lot to lose who were well motivated to put up with the expense and the hassle. Regular folks generally only saw these kinds of dongles in use in large corporations and government agencies, usually to control VPN access, and in financial institutions to protect the flow of money. Even PayPal got on board with the so-called *PalPal football*!
+
+Most regular people moved to SMS-based 2FA, and later GoogleAuth-style authenticator apps, but the need for hardware tokens remained for those with the biggest security needs. The first FIDO standards were developed to standardise the interface between hardware tokens and computers and apps.
+
+FIDO2 was the next bite at the Apple, and it built on the original FIDO spec by defining a new spec that would allow a smartphone to act as a hardware toke, and to allow browsers and websites to make direct use of the hardware tokens via the WebAuthn API. In the FIDO2 world it was like everyone's smartphone had a built-in hardware security token, and that token could be used to authenticate against the OSes, apps, and websites.
+
+FIDO2 has definitely increased the use of FIDO, with major cloud services providers like Microsoft encouraging users to enable phone-based logins on their accounts. Places that require extra security like financial institutions are also on board, as are important digital infrastructure sites like GitHub.
+
+Personally I'm using FIDO2, or FIDO2-like systems (vendors often don't call out their low-level technologies), to authenticate against Azure AD (to access Office365 and much more), GitHub, Adobe Creative Cloud, and my bank.
+
+## What are These Pain Points?
+
+Remember that with FIDO2 your phone becomes your hardware token, think if it like supergluing a YibuKi to the back of your phone!
+
+If you only ever used your phone to log in to things then it could authenticate you directly if the app or website you were using supported FIDO2/WebAuthn, but in reality, that's not how we use the kinds of services we need to log in to. We don't just want our email on our phones, we want it everywhere!
+
+So how do the vendors get around this? They make you install and *Authenticator* app that acts as a bridge from your phone to their servers.
+When you try to log in, the server sees you have a FIDO token so it sends a push notification to their app on your phone asking you to authenticate via their app. The app is on your phone, so it can use FIDO to check you really are you, and the app then replies to the server to let it know whether or not to let you in.
+
+This is clunky, but it gets worse!
+
+If you have multiple phones you need to enrol each separately into all your services. A chore to say the least, but one most people can avoid.
+
+But it gets much much worse, when you replace your phone, you have effectively thrown away your hardware token, your new phone is also a brand new hardware token! So, each time you get the latest shinny new hotness from Apple or Samsung or who ever, you have to re-enrol all your accounts. That's such a pain that two of the file Office365 accounts I have tokens for in my phone still have red exclamation marks telling me I need to re-enrol 8 month after I got my iPhone 14 Pro!
+
+## So What's Changing?
+
+## How Does this Help Fight Phising?
+
+## Open Questions
+
+## Next Steps
+
+## Further Reading
+ 
