@@ -8,6 +8,10 @@ So, rather than list out some soon-to-be-stale advice that probably doesn't appl
 
 If you're not doing anything about security, you're probably doing it wrong!
 
+### Don't fall for 'Politicians Logic'
+
+There's a fabulous line in the classic British comedy series Yes Minister when Sir Humphrey describes what he calls 'Politicians Logic' — "something must be done, this is something, therefore we should do this!". To borrow an old cliché, when you have a shiny new hammer, the whole world will look like nails, but it's not! Use the right tool for the job, not the one you most recently spend the most money on, or watched the most YouTube videos about!
+
 ### Don't Forget the Risk of NOT Acting!
 
 Just about everything you choose to do has some risk. Something can always go wrong when you make a change, so, it's easy to fall into the habit of doing nothing, especially in a corporate environment. Is it really worth your time trying to convince a manager that the risk is worth taking?
