@@ -19,7 +19,7 @@ There's a fabulous line in the classic British comedy series [Yes Minister](http
 > "Something must be done, this is something, therefore we must do it!".
 >  [www.youtube.com/…](https://www.youtube.com/watch?v=vidzkYnaf6Y)
 
-If you just read about a cool new password manager or what ever, or if you just read a story about a fancy-pants new defensive technique, don't assume that's the answer to life, the universe, and everything — always use the right tool for the job, even if it's an old boring one 🙂
+If you just read about a cool new password manager or what ever, or if you just read a story about a fancy pants new defensive technique, don't assume that's the answer to life, the universe, and everything — always use the right tool for the job, even if it's an old boring one 🙂
 
 ### Don't Forget the Risk of NOT Acting!
 
@@ -125,7 +125,7 @@ The single best way to ensure your advice gets ignored is to moralise at people 
 
 ### 'See something, say something!'
 
-Finally, try to recruit your family and friends into the security fight by encouraging them to say something when they see something odd. Would you rather have 100 false positives or one false negative? In security, you want the former, not the latter. You might get 100 people telling you something odd happened but it's nothing to worry about. But the 101st person might tells you something that lets you see a ransomware gang's first toehold before they can establish a foothold and unleash hell. hTat's a massive win compared to the world where everyone's afraid if being wrong so you hear nothing until it's too late.
+Finally, try to recruit your family and friends into the security fight by encouraging them to say something when they see something odd. Would you rather have 100 false positives or one false negative? In security, you want the former, not the latter. You might get 100 people telling you something odd happened but it's nothing to worry about. But the 101st person might tells you something that lets you see a ransomware gang's first toehold before they can establish a foothold and unleash hell. That's a massive win compared to the world where everyone's afraid if being wrong so you hear nothing until it's too late.
 
 ## Stay Curious!
 
