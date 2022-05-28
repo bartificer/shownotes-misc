@@ -81,7 +81,7 @@ The fewer things there are for an attacker to attack, the fewer attacks you're l
 - If you test 5 things, delete the four you don't pick
 - If you don't host any servers from your network, make sure your router blocks all in-bound connections. 
 - If your server is only serving web pages, block all but the web ports. 
-- If you have a web application delivery controller, block direct access to the back-end web servers and only open it to the ADC. 
+- If you have a web application delivery controller, block direct access to the back-end web servers, and only open access to the ADC. 
 - If your mail server is off-premise, block outbound SMTP traffic. 
 - If you have multiple logical groups of things, group them into separate networks with firewalls between them. 
 - If you router has WiFi but you don't use it, turn it off
