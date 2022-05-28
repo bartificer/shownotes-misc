@@ -113,7 +113,7 @@ If you're assuming that the only IPs that will be accessing your domain controll
 
 ## Spread the Word!
 
-No matter how hard you work to keep your family or your colleagues safe, nothing you do can protect them from their own naiveté. If we really want to protect people, we have to help them hone their IT "spidey sense" enough to stop and pause when something's not quite right. They don't need to know what to do, they just need to be vigilent enough to stop and ask for a second opinion!
+No matter how hard you work to keep your family or your colleagues safe, nothing you do can protect them from their own naiveté. If we really want to protect people, we have to help them hone their IT "spidey sense" enough to stop and pause when something's not quite right. They don't need to know what to do, they just need to be vigilant enough to stop and ask for a second opinion!
 
 Like it or not, **we all need to be evangelists**.
 
