@@ -19,7 +19,7 @@ There's a fabulous line in the classic British comedy series [Yes Minister](http
 > "Something must be done, this is something, therefore we must do it!".
 >  [www.youtube.com/…](https://www.youtube.com/watch?v=vidzkYnaf6Y)
 
-To borrow an old cliché, when you have a shiny new hammer, the whole world will look like nails, but that's an illusion! Use the right tool for the job, not the one you most recently spend the most money on, or watched the most YouTube videos about!
+If you just read about a cool new password manager or what ever, or if you just read a story about a fancy-pants new defensive technique, don't assume that's the answer to life, the universe, and everything — always use the right tool for the job, even if it's an old boring one 🙂
 
 ### Don't Forget the Risk of NOT Acting!
 
@@ -55,7 +55,7 @@ So, **always over defend**, and if the decision is **borderline, err on the side
 
 So far I've focused mostly on making decisions when something happens, in other words, reacting to some kind of change. Maybe it's the release of a new attack tool, the discovery of a vulnerability, the rise of a new attack technique, or maybe it's a change of circumstance. Maybe say everyone's just been forced to work from home with no notice 😉. It could also be the rolling out of a new system or service that will make people's lives better in some way, but also opens up new attack surfaces.
 
-It's annoying, but in security, even the best prepared people will be forced to react to events on a regular basis. But the more prepared you are, the less often you'll need to react, and the less you'll need to do in haste. If you keep everything patched, and news comes out of a nasty exploit in active use that was patched last month, no problem! You do a quick check of your audit logs, verify the patch did get applied, and move on with your day!
+It's annoying, but in security, even the best prepared people will be forced to react to events on a regular basis. But the more prepared you are, the less often you'll need to react, and the less you'll need to do in haste. If you keep everything patched, and news comes out of a nasty exploit in active use that was patched last month, no problem! You do a quick check of your audit logs, verify the patch did get applied, and move on with your day! (An audit log is just a fancy-pants word for a log of who or what did what when — it lets you assign blame 🙂)
 
 ### The Inverted Pyramid of Pain
 
