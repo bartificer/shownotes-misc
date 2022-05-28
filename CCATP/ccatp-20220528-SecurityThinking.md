@@ -59,27 +59,67 @@ It's annoying, but in security, even the best prepared people will be forced to 
 
 ### The Inverted Pyramid of Pain
 
-LEFT OFF HERE!!!
+OK, so I've convinced you to be proactive — now what? There are literally infinitely many things you could do, where do you start?
 
+You might fear that the stuff that's easy to do won't give you much of an impact, but thankfully, you'd be wrong!
 
-Where to start is a big question — so big most people and organisations become paralysed by it, and simply fall back into a perpetual reactive mode. If you're lucky, you're reacting to warnings from security agencies and reports from auditors, but sooner or later you'll be reacting to attacks.
+Attacks follow a so-called *power law*, so simple attacks are very frequent, while complex attacks that involve as-yet-undiscovered zero-days are very rare. Defending against the un-known un-known is really hard, but defending against the simple stuff is actually quite easy!
 
-Some pro-active security hardening is easy and involves little to no pain, and some is effectively impossible. You might think the easy stuff is likely to have small rewards, so is probably not worth it, but you'd be utterly wrong — the easy things tend to have the biggest effect, and the hardest things, the smallest effect! You can diagram that as an upside-down triangle, with ease (lack of pain) on the vertical axis and reward mirrored around the origin on the on the horizontal axis. This makes for a fun slide in presentations, and is generally referred to as *'the inverted pain triangle'*.
+This is often shown in slide-decks as an upside-down triangle with easy to do things high on the chart, and the width of the triangle representing the effectiveness of the actions.
 
-The bottom line is wonderful — **do the easy stuff first** because it will give you the best results for your efforts!
+I don't find it intuitive to graph based on easiness rather than difficulty, but it's a cool and catchy name, so I'm fine with it 🙂
 
-## Make Choices
+Anyway, the bottom line is wonderful — **do the easy stuff first** because it will give you the best results for your efforts!
 
-So you're all inspired to go do something, great, but now you're going to be faced with decisions — what's the right value for this setting? What permissions should I give this user/computer/network? You'll inevitably be making tradeoffs, and each situation is different, but some general guiding principles can help a lot.
+So what kind of easy stuff can you do? The most powerful thing is to cover your proverbial rear, or, in fancy language …
 
-### Minimise the Attack Surface
+### Minimise your Attack Surface
+
+The fewer things there are for an attacker to attack, the fewer attacks you're likely to suffer!
+
+If you don't need an app, don't install it, if you stop using stuff, remove it, if you test 5 things, delete the four you don't pick, and so on and so forth. If don't host any servers from your network, make sure your router blocks all in-bound connections, if your server's only serving web pages, block all but the web ports, if you have a web application delivery controller, block direct access to the back-end web servers and only open it to the ADC, if your mail server is off-premise, block out-bound SMTP traffic. If you have multiple logical groups of things, group them into separate networks with firewalls between them. If you router has wifi but you don't use it, turn it off, and so on and so forth.
+
+**Don't stop yourself or your family/co-workers doing the things they need to do, but don't leave things on, installed, or open needlessly!**
 
 ### The Principle of Least Privileges
 
-### Think Defensively
+A very important part of your broader attack surface are the privileges users, apps, and devices have on your systems, and that's where the *principle of least privileges* comes in, there's no single official wording, but it goes something like:
+
+> "Everyone one and every thing should have all the privileges needed, but no more"
+
+That's an impossible target, a bit like *inbox zero*, but it's a fantastic thing to strive towards. Sure, practicalities will stop you locking things down completely, but every little bit of granularity you add helps keep you safer.
+
+## Think Defensively
+
+Something I'm very passionate is what I call a defensive mind-set. Think of it as the security equivalent of defensive driving. You try anticipate likely mistakes and problems, and try to deploy some mitigations up-front.
+
+In Ireland, to drive a fire truck you need to pass a defensive driving course. I've had a friend explain it to me, and it stuck with me — it teaches drivers to assume their fellow road users will do the dumbest things, and be ready to react when they do. If there's a car making a turn across your lane (a right turn here in Ireland), and you're not sure they've seen you, assume they've not seen you. If a ball rolls out into traffic, assume a kid is about to follow and slow down. Be sure you have the equipment you need should you get caught out in extreme weather, and so on.
+
+Translating that way of thinking to the world of computers I arrive at two concrete pieces of advice:
+
+1. Think of likely problems, and do what you can to minimise their effect before they happen
+2. Seek out assumptions, and replace them with controls
+
+If you think it seems likely your users will install unauthorised apps, put some logging and alerting in place so you get notified, and have your *spiel* on the dangers of *shadow IT* prepared.
+
+If you're assuming that the only IPs that will be accessing your domain controllers are from the IT department's subnet, deploy a firewall to enforce that assumption.
 
 ## Spread the Word!
 
-### Don't Moralise, Evangelise!
+No matter how hard you work to keep your family or your colleagues safe, nothing you do can protect them from their own naiveté — if we really want to protect people we have to help them hone their IT-spidey sense enough to stop and pause when something's not quite right. They don't need to know what to do, they just need to be vigilent enough to stop and ask for a second opinion!
+
+Like it or not, **we all need to be evangelists**.
+
+### Don't Moralise!
+
+I chose the word *evangelist* carefully — think Guy Kawasaki evangelising the Mac with a giant big smile on his face and a real willingness to listen and offer constructive suggestions. Meet people where they are, and help them move themselves in the right direction.
+
+The single best way to ensure your advice gets ignored is to moralise at people — if you try to shame or guilt people into doing the right thing you're almost certain to fail, and everyone just end up cranky at everyone else!
 
 ### 'See something, say something!'
+
+Finally, try to recruit your family and friends into the security fight by encouraging them to say something when they see something odd. Would you rather have 100 false positives or one false negative? In security, you want the former, not the latter. If you get 100 people telling you something odd happened but it's nothing to worry about, and the next person tells you something that lets you see a ransomware gang's first toe hold before they can establish a foothold and unleash hell, that's a massive win compared to the world where everyone's afraid if being wrong so you hear nothing until it's too late.
+
+## Stay Curious!
+
+At the end of the day, the single most important thing you can do to protect your security is stay curious. Learn about new tools, read reports on new attacks, take on board the advice from others, and just keep soaking it all up. **You'll never know everything, but you can always learn more!**
