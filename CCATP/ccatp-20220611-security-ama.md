@@ -44,3 +44,10 @@ James Carroll from THORLaser.com asks:
 
 > I have no urge to hide my location or anything else but I draw the line at giving away usernames and passwords
 
+Lynda from Silicon Valley is concerned about doxxing - where trolls publish private information about you because of something you said online, say on Twitter. She asks:
+
+> Are there any ‘anti doxxing’ tutorials or advice you can give to protect oneselve, other than just keeping one’s mouth shut?
+
+Allison Sheridan from Los Angeles asks in regards to FIDO and the new Passkey method of passwordless login:
+
+>If I have an existing password-based account on a website, and I switch to a passkey, will the website remember the old password? Because if so, it would then still be possible for a bad actor to log in using that old password. In the same vein, what happens if you click on "I forgot my password"? Will every website have to know you've switched to passkeys and know to securely erase just _your_ password?
