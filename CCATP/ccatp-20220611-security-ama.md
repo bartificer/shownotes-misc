@@ -60,6 +60,11 @@ Happy Windows User asks:
 
 >Dumb questions: Is this part of the telemetry Microsoft collects on its users? If so, how can I prevent it? Typically, I don't use my PC with a Windows Account but as User Account. I haven't upgraded to Windows 11 yet however I know Microsoft will require a Windows account for PC use, so how can I block Microsoft from knowing which files I access on my PC?  
 
+NASAnut asks:
+>I have some questions regarding a VPN. I have a Synology NAS which offers the ability to set up a VPN on it. Assuming my goals for using a VPN are more privacy related, does setting up the VPN on my NAS provide any privacy/anonymity from my ISP, or, since my the NAS is on my network, and my ISP knows my IP, will my ISP still be able to see locations that I am connecting to? Are there any Pros/Cons regarding using a VPN on my NAS located within my home network?
+
 Allison in Los Angeles asks another question (becuase she can):
 
 >Is it too soon to start telling our non-technical friends and family about our passwordless future? I'm not worried about getting them overly excited, I'm worried that they'll hear about it and think it's a scam so I was thinking of just starting to mention it so they get used to the idea. But maybe it's not mainstream enough yet in the Muggle news?
+>
+>
