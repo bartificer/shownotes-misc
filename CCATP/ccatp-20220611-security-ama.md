@@ -51,3 +51,15 @@ Lynda from Silicon Valley is concerned about doxxing - where trolls publish priv
 Allison Sheridan from Los Angeles asks in regards to FIDO and the new Passkey method of passwordless login:
 
 >If I have an existing password-based account on a website, and I switch to a passkey, will the website remember the old password? Because if so, it would then still be possible for a bad actor to log in using that old password. In the same vein, what happens if you click on "I forgot my password"? Will every website have to know you've switched to passkeys and know to securely erase just _your_ password?
+
+Happy Windows User asks:
+
+>Hello Allison and Bart.  Thank you for your show and your enthusiasm. 
+
+>As an exclusive Windows desktop user, I noticed within Internet Explorer's History tab, it keeps logs of all my personal files I access on my PC, (see Screenshot 470). I realize Microsoft will end Internet Explorer this year, however, tracking my accessed files also shows up in the AppData folder, (see Screenshot 107), the file path is ThisPC/Windows (C:)/User/name/AppData/Local/Microsoft/Internet Explorer.  
+
+>Dumb questions: Is this part of the telemetry Microsoft collects on its users? If so, how can I prevent it? Typically, I don't use my PC with a Windows Account but as User Account. I haven't upgraded to Windows 11 yet however I know Microsoft will require a Windows account for PC use, so how can I block Microsoft from knowing which files I access on my PC?  
+
+Allison in Los Angeles asks another question (becuase she can):
+
+>Is it too soon to start telling our non-technical friends and family about our passwordless future? I'm not worried about getting them overly excited, I'm worried that they'll hear about it and think it's a scam so I was thinking of just starting to mention it so they get used to the idea. But maybe it's not mainstream enough yet in the Muggle news?
