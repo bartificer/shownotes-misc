@@ -63,6 +63,10 @@ Happy Windows User asks:
 NASAnut asks:
 >I have some questions regarding a VPN. I have a Synology NAS which offers the ability to set up a VPN on it. Assuming my goals for using a VPN are more privacy related, does setting up the VPN on my NAS provide any privacy/anonymity from my ISP, or, since my the NAS is on my network, and my ISP knows my IP, will my ISP still be able to see locations that I am connecting to? Are there any Pros/Cons regarding using a VPN on my NAS located within my home network?
 
+Steve in Los Angeles asked:
+
+“Is the new Fido standard for passkeys actually more secure than a password with second factor authentication from an app? If so, why?”
+
 Allison in Los Angeles asks another question (becuase she can):
 
 >Is it too soon to start telling our non-technical friends and family about our passwordless future? I'm not worried about getting them overly excited, I'm worried that they'll hear about it and think it's a scam so I was thinking of just starting to mention it so they get used to the idea. But maybe it's not mainstream enough yet in the Muggle news?
