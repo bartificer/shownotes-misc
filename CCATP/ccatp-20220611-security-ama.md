@@ -1,3 +1,5 @@
+CCATP #732 for June 11, 2022, and I'm your host, Allison Sheridan.  This week our guest is Bart Busschots.  This week we're going to do something a little different, t
+
 Question I could pose to the community:
 
 In a future episode of Chit Chat Across the Pond (hopefully 11 June 2022), security enthusiast Bart Busschots would like to open up the floor to answer your security questions. Think of it as an Ask Me Anything ... about security.
