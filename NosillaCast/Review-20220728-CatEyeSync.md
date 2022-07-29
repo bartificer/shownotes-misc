@@ -58,6 +58,8 @@ Firstly, the pairing process is easy. Secondly, the app shows you the current st
 
 The home page also gives you a big power button that's basically a software version of the single hardware button on the Sync Core, you press-and-hold for 2 seconds to power all the lights on or off. To my surprise, you don 't seem to be able to change the mode on each individual light from the app though. Or, if you can, the UI is not discoverable enough for me to find it. What you can do though is disable individual modes on each light, so if you only ever want to use 2 of the five modes, you can disable the three you don't want, and then the button on the light will only toggle between the two you left enabled. You can also enable or disable *Kinetic mode* (the accelerometer thing) from within each light's page in the app.
 
+Just before recording this segment I found a setting in the app to enable notifications on your phone when one of your batteries runs low. I've enabled it, but I've not had a chance to see how well it works yet. Assuming it works as advertised, and assuming the notifications get pushed through to my watch, I expect this will be a very useful feature indeed!
+
 ## Does it Solve the Pain Points?
 
 Yes!
@@ -66,4 +68,18 @@ Yes!
 2. Both the status light on the Sync Core and the home screen of the app let me quickly verify that the lights I can't see are connected and in sync as expected.
 3. Both the Sync Core's physical button and the app's virtual button let me power on and off all my lights at once.
 
-But, there is one down-side, neither of the available rear light options can be connected to the standard CatEye rear mount, not even with an adaptor, so you simply have to use the rubber strap for the Kinetic, and a rubber strap or cloths clip for the Wearable. If CatEye were to release adaptors for the two rear light options the system would be absolutely perfect for me. Still, on the whole I'm extremely happy with the upgrade.
+But, there is one down-side, neither of the available rear light options can be connected to the standard CatEye rear mount, not even with an adaptor, so you simply have to use the rubber strap for the Kinetic, and a rubber strap or cloths clip for the Wearable.
+
+Finally, I'm left with one point of confusion — the manual says you can have up to 7 lights, but when adding lights the interface made it look like I could only add one of each type. It's also not clear from the manual or the site which combinations are supported. Can I have two Cores for example? I'd like a front light on my helmet, and one on my handlebars, is that possible with the current range which only has the Core as a front light?
+
+## Room for Improvement & Growth
+
+Given how long-lived many of CatEye's previous standards have been, Sync is still a very new product line, so I imagine we'll see it expand significantly in the next few years. If I were calling the shots over at CatEye, this is what I'd like them to do:
+
+1. Release adaptors for the Sync Kinetic and Sync Wearable so they can connect to the standard CatEye rear mounting system.
+2. Expand the range of compatible lights to include more form-factors. I'd love a light-weight secondary front light designed for helmet mounting and a sync-compatible version of the Rapid 2 or 3 rear lights. I'd also love a sync-compatible replacement for the old Duo line of all-in-one front and rear helmet lights. A front-facing safety light would also be a nice addition for many.
+3. Add more functionality to the app — I should be able to see and change the state of each light easily, and it would be amazing to have the ability to create my own presets where I can specify any combination of modes on my collection of lights, and then have the button on the Sync Core cycle those combinations rather than cycling single modes on the Core itself.
+
+## The Bottom Line
+
+Even though this system is still in its infancy, I think it's ready for real-world use for even hard-core cyclists like myself. The level of reassurance offered by that single solid green LED that means that I know I have at least one working rear light is totally worth the price and the current compromises! And, I think we have every reason to expect this range to expand and improve, so your experience is only likely to improve from here on out!
