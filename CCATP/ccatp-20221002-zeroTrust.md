@@ -72,12 +72,69 @@ Only when you know what you’re trying to achieve can you start to effectively 
 
 A simple overview of just Microsoft’s offering is literally a 2 day course (I just took it and passed the exam 😀), so this can only be a little taster of what’s being deployed out there.
 
-## Limiting Privileges
+### Users & Permissions
 
-## Assume Breach
+In the old world you're logged in or you're not — it's a binary thing. With modern cloud services like Azure Active Directory (the identity brain of Office365) your login state is on a spectrum, and contains a lot of metadata. Your login has a risk score based on how confident the system is that you're really you, it has contextual information like where you are (IP and geographic) and what device you're using, and it captures the level of challenge you were presented with, i.e. did you pass just basic authentication, or did you pass Multi-Factor Authentication (MFA), and if you did, did you do it the old fashioned way with codes, or did you use a modern passwordless technology like Passkeys, the Microsoft Authenticator App, or Windows Hello?
+
+Whether you're using a desktop app or a web app, each time you try to access a resource, your credential is passed to the back-end service, and it makes a fresh determination of whether or not to allow your request. You might be allowed to view your own documents from any device, but financial documents might only be allowed from corporately managed devices. Or, you might be allowed to use some apps without MFA, but be challenged for MFA when you move to something more sensitive. This all comes under the label of *conditional access*.
+
+Access to shared resources should all be controlled at the group level, not the individual level. This is where the segmentation strategy comes in. Your position within the organisation will give you a defined set of group memberships, and its those groups that get granted rights to access resources. When you move department your groups get updated to reflect your new role (potentially automatically in really well architected systems), and the change will take effect instantly.
+
+In more complicated apps and services where there are granular permissions those permissions should be grouped into sensible roles, and those roles should then be assigned to groups. This is known as *Role Based Access Control*, or RBAC.
+
+All this is for regular user access, privileged access should be more tightly controlled, with some kind of *Privileged Access Management* or PIM. Ideally no user ever retains permanent privileged access, instead, users have the right to enable privileges when needed. For admins that's probably a self-service operation, but for technicians there can be approval loop in the processes. Either way, the privileged access will be for a limited time, and it will be audited.
+
+You might wonder what the point of self-service PIM is, but it has two advantages over permanent privileges — firstly, there's an audit trail, but secondly, that ever-present authentication can step in and place restrictions on the escalation, maybe you can only assume your admin powers when on the corporate network, or when using a corporately managed device, or when on a specific VPN, or when not abroad, and so on. In other words, it provides a means for imposing a policy as an explicit security control instead of an assumed practice.
+
+### Data
+
+Once you've asserted control over who is doing what from where, the next step is to assert control over what they're doing things to, i.e., to govern your data!
+
+All data in modern cloud systems has metadata effectively imbedded in it, so the information about the data travels with the data, and can't be easily separated from it. This metadata includes the usual stuff you might expect like timestamps and owners and contributors, but it also contains *data classification labels* and *data retention labels*. Classifications labels define what the data is, and retention labels enforce a life cycle on the data.
+
+In terms of retention there are three kinds of data — data that can be kept as long as people want it, data that **must** be retained for a minimum length of time (e.g. financials), and data that **must not** be retained longer than a given period, probably due to some kind of data protection regulation.
+
+When it comes to classification you're talking about labelling things like contracts as contracts, financial accounts and statements as financial data, and even tagging documents as containing specific pieces of sensitive information like credit card numbers. Some data classification is manual, some is rule based, but a lot is AI driven these days.
+
+The key point is that once you data is labeled you can apply security controls to it on a file-by-file or record-by-record basis. 100 users might have access to the files area in a Team, but only those in the finance office would be able to view the SEC filings in that folder. You can also use the labels enforce *conditional access*, like some data only being available from corporately managed devices, or during work hours from the office etc..
+
+Another important security control enabled by data classification is *Data Leak Protection* — this puts limits on how and by whom data can be shared.
+
+Finally, data retention labels can be used to drive both automated backups, and, automated data retention rules, with the deletion of some files being blocked until the file is appropriately old, or automatically destroyed after a given amount of time.
+
+### Devices & Apps
+
+I won't dig deep into this area because it gets very deep very quickly, but an important point to note is that both devices an apps are authenticated with certificates of various forms. You can't limit what an app can do if you're not sure it really is that app you think it is!
+
+One thing I do want to draw attention to is the evolution of device management (AKA MDM) — in the past it was also a binary thing, a device was either personal or corporate, but now it can exist on a spectrum, and different conditional access rules can be applied at different points on the spectrum.
+
+At one end of the spectrum you have an un-known un-managed device, then you have a registered but unmanaged device, and then you have the most interesting point on the spectrum, a partially managed device, and finally you have fully managed devices. On a partially managed device some apps and some parts of the file system are controlled by corporate IT, but the phone itself and all the regular apps and data are controlled by the user and not even accessible by corporate IT. The managed apps and data can be remote wiped without affecting the rest of the device.
+
+### Infrastructure, Networks, Etc.
+
+At this stage we're getting much too far into the weeds for this show, so I'll just say that the tools are evolving at an impressive rate, and end-goal these tools are empowering is *micro-segmentation*, that is to say, small islands of access that stop attackers in their tracks when the try to move from something they were able to hack to any other resource. In the industry jargon *'micro-segmentation blocks lateral movement in the post-exploitation phase'*. A much cooler way to say it is that it limits the blast radius of a hack!
+
+## The Effect of Assuming a Breach
+
+If you assume everything can be hacked, and at least something probably is at every moment, then you're very well motivated to install tools for finding and responding to security incidents. This is an area that's been growing very fast, and that I find really cool.
+
+The first thing you need is a *single pane of glass* where all your logs come together. These kinds of systems are referred to as SIEMs (Security Incident and Event Monitoring). A good SIEM won't just aggregate your logs, but it will allow you to efficiently search the data, assemble it into custom dashboard and reports, and to configure various alerting rules when things happen.
+
+A basic SIEM is great, but it will generate a lot of alerts, wouldn't it be good if you could automate your response? That's where the next acronym comes in — SOAR (Security Orchestration, Automation, and Response). When you add SOAR functionality to a basic SIEM you can automatically respond to security incidents without a human needed to be involved. You'd generally use SOAR rules to push systems into a safe state and raise the alarm. For example, if enough alerts are triggered to make it probable that an account has been compromised, disable it and let the service desk or security operations centre (SOC) know.
+
+Automated alerts and responses can only get you so far. Your alert logic can't be perfect, especially in a rapidly changing world, and while in theory corporations should have dedicated security teams pro-actively hunting for problems, the reality is nowhere has enough staff to catch everything, and most places have no where near enough to catch even the low-hanging fruit! This is where AI comes in! A lot of modern attacks consist of stringing together steps that are not suspicious individually, but when you put them all together they are. AI can be trained to spot this kind of *'anomalous normal'* activity. Modern SIEMs that have this kind of functionality tend to be branded as XDR, for *eXtended Detection and Response*.
+
+All of that means that a single pane of glass for security operations like Microsoft's Sentinel is now branded as SIEM/SOAR with XDR!
+
+## Final Thoughts
+
+Unless you're lucky enough to be starting from a scratch, the move to Zero Trust is going to be a gradual journey. It's going to take a long time, but a lot can be achieved quickly by starting with the basics and building it up from there. The universally agreed starting point is identity — the better a handle you get on authentication the more secure you can be. After identity comes asserting control over end-points and data, and then you're into icing the cake.
+
+No more medieval castles — verify everything always, give as little access as is needed, and defend everything because there's no outer wall to protect you!
 
 ## Links
 * NIST's [Zero Trust Architecture](https://www.nist.gov/publications/zero-trust-architecture)
 * Zero Recent Trust Status Reports:
 	* Summer 2021 — [Microsoft](https://www.microsoft.com/security/blog/2021/07/28/zero-trust-adoption-report-how-does-your-organization-compare/)
 	* Summer 2022 — [Okta](https://www.okta.com/resources/whitepaper-the-state-of-zero-trust-security-2022/thankyou/)
+* [Microsoft's Zero Trust Sales Pitch](https://www.microsoft.com/en-ie/security/business/zero-trust)
