@@ -49,7 +49,6 @@ You apply these principles across the equally loosely defined *pillars of IT*. S
 5. Networks
 6. Data
 
-
 ## Start with Clear Policies!
 
 When you try apply those three broad concepts across all those pillars you soon realise that Zero Trust is something the entire organisation has to buy into, it’s not something IT can do alone, let alone just the cybersecurity team!
@@ -82,7 +81,7 @@ Access to shared resources should all be controlled at the group level, not the 
 
 In more complicated apps and services where there are granular permissions those permissions should be grouped into sensible roles, and those roles should then be assigned to groups. This is known as *Role Based Access Control*, or RBAC.
 
-All this is for regular user access, privileged access should be more tightly controlled, with some kind of *Privileged Access Management* or PIM. Ideally no user ever retains permanent privileged access, instead, users have the right to enable privileges when needed. For admins that's probably a self-service operation, but for technicians there can be approval loop in the processes. Either way, the privileged access will be for a limited time, and it will be audited.
+All this is for regular user access, privileged access should be more tightly controlled, with some kind of *Privileged Identiy Management* or PIM. Ideally no user ever retains permanent privileged access, instead, users have the right to enable privileges when needed. For admins that's probably a self-service operation, but for technicians there can be approval loop in the processes. Either way, the privileged access will be for a limited time, and it will be audited.
 
 You might wonder what the point of self-service PIM is, but it has two advantages over permanent privileges — firstly, there's an audit trail, but secondly, that ever-present authentication can step in and place restrictions on the escalation, maybe you can only assume your admin powers when on the corporate network, or when using a corporately managed device, or when on a specific VPN, or when not abroad, and so on. In other words, it provides a means for imposing a policy as an explicit security control instead of an assumed practice.
 
