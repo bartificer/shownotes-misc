@@ -49,11 +49,28 @@ You apply these principles across the equally loosely defined *pillars of IT*. S
 5. Networks
 6. Data
 
-When you try apply those three broad concepts across all those pillars you soon realise that Zero Trust is something the entire organisation has to buy into, it's not something IT can do on their own, let alone just the cybersecurity team!
 
 ## Start with Clear Policies!
 
-## Continuous Verifcation
+When you try apply those three broad concepts across all those pillars you soon realise that Zero Trust is something the entire organisation has to buy into, it’s not something IT can do alone, let alone just the cybersecurity team!
+
+Deploying apps and services, onboarding devices, managing users, and implementing security controls all involve making choices. Those choices should compliment each other and all pull in the same direction, and that’s impossible without high-level policies for guidance. The very highest levels of management need to be involved in writing **and maintaining** these policies, and everyone in the organisation needs to understand them.
+
+### Segmentation
+
+One of the most important decisions to be made is how to group and divide things, or to use the jargon — *segmentation*. For all your security controls across all the pillars to be effective they all need to be in alignment with each other, and the best way to achieve that is with a high-level policy that everyone is bought into. 
+
+### Know Your Data
+
+Another vital component of an effective high level policy is *data governance*. What do you have, where is it, how sensitive is it, how long does it need  be to be retained, who should and should not have access, from where, and who can it be shared with, and how.
+
+This is probably the most difficult part of getting to an effective Zero Trust implementation!
+
+## Some of the Cool Tech
+
+Only when you know what you’re trying to achieve can you start to effectively deploy the fun tech stuff 🙂
+
+A simple overview of just Microsoft’s offering is literally a 2 day course (I just took it and passed the exam 😀), so this can only be a little taster of what’s being deployed out there.
 
 ## Limiting Privileges
 
