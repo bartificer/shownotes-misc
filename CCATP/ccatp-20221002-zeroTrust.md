@@ -26,7 +26,7 @@ Before we dig into the details, it's very important to understand that Zero Trus
 
 The other important thing to understand is that while it's popularity has exploded since the pandemic, it's not actually a new idea, it's just taken a while to mature.
 
-The first stirrings of what would become Zero Trust were at a CISO forum meeting in XXX in 2003, when the idea was referred to as *de-perimiterisation*.
+The first stirrings of what would become Zero Trust were at a CISO forum meeting in Jericho in 2003, when the idea was referred to as *de-perimiterisation*.
 
 The idea went through a few iterations over the coming years with significant contributions from major firms like Forrester Research, Gartner, and Google (who named their series of whitepapers on the topic *BeyondCorp*). The idea really took off when NIST formalised their version of the concept in 2020.
 
@@ -37,8 +37,8 @@ Today, all the major vendors are advising their customers to adopt Zero Trust, a
 Despite being quite a loose term expressed in many different ways, Zero Trust always boils down to just three principles:
 
 1. *'Never Trust, Always Verify'* — continuously verify all identities, not just users, but also devices & apps.
-2. *'Just-enough just-in-time Access'* — give users the access they need, when they need it — no more than they, and no longer than they need it.
-3. *'Assume Everything can be Hacked'* (sometimes stated more strongly as "Assume Everything **is** Hacked") — detect problems quickly, and *'limit the blast radius'* with *micro-segementation* .
+2. *'Just-enough just-in-time Access'* — give users the access they need, when they need it — no more than they need, and no longer than they need it.
+3. *'Assume Everything can be Hacked'* (sometimes stated more strongly as "Assume Everything **is** Hacked") — detect problems quickly, and *'limit the blast radius'* with *micro-segementation*.
 
 You apply these principles across the equally loosely defined *pillars of IT*. Some descriptions use five pillars, but I'm most familiar with Microsoft's six pillars:
 
@@ -48,7 +48,6 @@ You apply these principles across the equally loosely defined *pillars of IT*. S
 4. Infrastructure (servers, firewalls, load balancers, etc.)
 5. Networks
 6. Data
-
 
 ## Start with Clear Policies!
 
@@ -108,7 +107,7 @@ I won't dig deep into this area because it gets very deep very quickly, but an i
 
 One thing I do want to draw attention to is the evolution of device management (AKA MDM) — in the past it was also a binary thing, a device was either personal or corporate, but now it can exist on a spectrum, and different conditional access rules can be applied at different points on the spectrum.
 
-At one end of the spectrum you have an un-known un-managed device, then you have a registered but unmanaged device, and then you have the most interesting point on the spectrum, a partially managed device, and finally you have fully managed devices. On a partially managed device some apps and some parts of the file system are controlled by corporate IT, but the phone itself and all the regular apps and data are controlled by the user and not even accessible by corporate IT. The managed apps and data can be remote wiped without affecting the rest of the device.
+At one end of the spectrum you have an unknown unmanaged device, then you have a registered but unmanaged device, and then you have the most interesting point on the spectrum, a partially-managed device, and finally you have fully managed devices. On a partially-managed device some apps and some parts of the file system are controlled by corporate IT, but the phone itself and all the regular apps and data are controlled by the user and not even accessible by corporate IT. The managed apps and data can be remote wiped without affecting the rest of the device.
 
 ### Infrastructure, Networks, Etc.
 
