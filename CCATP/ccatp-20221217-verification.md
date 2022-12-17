@@ -57,8 +57,57 @@ All that just to prove the address bar is not lying to you? Yup!
 
 Let's start in the pre-Elon world, what did the blue check on Twitter mean before Elon Musk took over the company and re-wrote all the rules?
 
-LEFT OFF HERE!!!
+The blue tick's claim was very strong — "this account is the person/organisation it claims to be", but the evidence and checks were utterly opaque, basically boiling down to *"trust us, we did the work, and we did it well"*. Finally, the communication was simple, some account metadata that the website rendered with a blue icon.
 
-## Mastodon Link Verification
+Notice how trust was absolutely central to the whole thing? Many, me included, considered pre-Elon Twitter worthy of that trust, we we trusted the blue ticks. Now that Elon has taken over the claim is in flux, does it just mean the account paid, or does it mean some actual identity checks were done? Hard to tell really, and of course, the evidence and checks are still 100% *"trust us, we'll do it right"*. Personally, I have no trust in the current Twitter, and I don't think I'm alone in that!
 
-TO DO
+## Mastodon Verification
+
+Twitter's verification entirely depended on there being a central organisation to trust — Twitter Inc.! Mastodon is a federated system without an obvious central authority where Twitter-style verification could be done, so there is no exact. analogue of Twitter's account verification on Mastodon. However, there are a number of different verified claims possible on the system.
+
+### Mastodon Link Verification
+
+There is one official verification option built into the Mastodon specification — Profile Link Validation. You can add up to four links to your Mastodon profile, and it is possible to have those links be marked as verified.
+
+So what's the claim? The claim is that the person who controls the Mastodon site also controls the linked site(s). That's it! So the credibility of the identity entirely hangs in the credibility of the linked site(s). If someone has a verified link to their author page on a major news paper's website, that's a pretty strong indicator of identity, but a link to a random blog, not so much!
+
+What evidence is required?
+
+To verify your control of a linked site you must add a visible or invisible link from the site back to your profile that meets these simple criteria:
+
+1. The URL in the profile must be secure, i.e. HTTPS
+2. The linked page must contain either visible link (`<a>` tag in the page's `<body>`), or an invisible link (`<link>` tag in the page's `<head>`) with a `href` attribute pointing to the Mastodon profile URL, and a relationship attribubte (`rel`) which contiains the value `me`. E.g.:
+
+```html
+<head>
+  <link rel="me" href="https://mstdn.social/@bbusschots" />
+</head>
+<!-- or --!>
+<body>
+  <a rel="me" href="https://mstdn.social/@bbusschots">My Mastodon Profile</a>
+</body>
+```
+
+I've done some testing, and redirects will be followed, so I have my links embedded in `https://www.bartbusschots.ie/s/`, but I have `https://www.bartb.ie/` redirecting there, and both links verify.
+
+One annoying caveat is that it takes time for the validation to happen, so nothing happens immediately, so debugging this is a slooooow process 🙁
+
+That covers the claim and the evidence, so how are the checking and communication done? Your Mastodon server does the check and then adds some metadata to your account. This is a very weak assertion, but that's OK because the check is so simple any Mastodon client can check for itself.
+
+### Public Key Verification
+
+If you use GPG public keys to communicate securely with people, you can add a verified link to your public key to your profile by using the free and open source [Keyoxide service](https://codeberg.org/keyoxide/).
+
+The claim here is that the person who controls the Mastodon profile also controls the private key that matches the linked public key. This is useful for journalists who want sources to send them secure information.
+
+### Implied Verification by Instance
+
+Something which is emerging as Mastodon takes off is a kind of indirect implied verification through instance rules.
+
+An instance has a domain name, and that domain name could be very credible. For example, the Whitehouse could run an official presidential Mastodon instance on the `whitehouse.gov` domain. That kind of thing is actually happening in Europe, with the European Parliament and German government running official instances.
+
+The owners of these instances can set their own rules, and they can explicitly state them, saying for example that only government officials and elected representatives get accounts on the instance. This then becomes effectively like the old Twitter — if you trust the organisation that runs the instance to do what they say they do, then you trust the authenticity of all accounts on the instance.
+
+## Final Thoughts
+
+Powerful verification is **hard** — just look at how much work goes into that little padlock in your browser! No social network comes close to that, but if you trust the social network, they can offer believable verification, but you need to always understand what it is that is being verified. In the case of Mastodon the claim is that the link in the profile leads to a page owned by the profile's owner, and that page could also map that person to a PGP public key if they're one of the tiny minority of people who use that technology. Finally, in a federated system, the instance operator can also act as a source of verification — if you trust that the instance really is run by the organisation it claims to be run by, and if you trust that organisation to run the instance honestly, they you can trust the identity of the accounts on that instance.
