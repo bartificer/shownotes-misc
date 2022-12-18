@@ -8,7 +8,7 @@ When ever anything brands itself as verified, there are four questions you have 
 
 1. What's the **claim** being made?
 2. What **evidence** is being offered to support the claim?
-3. What **checks** are performed to compare the evidence to the claim, and by who? (Think people, organisations, and/or software.)
+3. What **checks** are performed to compare the evidence to the claim, and by whom? (Think people, organisations, and/or software.)
 4. What's the process for  **sharing** the result of the verification?
 
 That might sound simple, but there's actually a lot to think about!
@@ -37,7 +37,7 @@ For a DCV cert you simply have to prove that you control the domain(s) you're ge
 
 Like I said, this is easy to do, and even easier to verify automatically, so DCV certs can be issued entirely automatically.
 
-OV certs on the other hand require human checks. Your organisation needs to be registered as a business, charity, or formal government department/agency/office, and you need to actually answer the phone at a number that can be verifiably tied to the organisation through a recognised trusted mechanism. I have to go though OV once a year every year, and it's a giant pain! It takes both my time and the certificate authority's time, so, OV certs are not free.
+Organizational Validation certs on the other hand require human checks. Your organisation needs to be registered as a business, charity, or formal government department/agency/office, and you need to actually answer the phone at a number that can be verifiably tied to the organisation through a recognised trusted mechanism. I have to go though OV once a year every year, and it's a giant pain! It takes both my time and the certificate authority's time, so, OV certs are not free.
 
 Also, you can choose to go through an extra strict validation process, and then your OV cert gets upgraded to *extended validation*, or EV, which add more confidence in the validation, but doesn't change the claims.
 
@@ -47,7 +47,7 @@ As already implied, *Certificate Authorities* do the checking. For DCV certs the
 
 How do you get to be a CA? Well, you need to be trusted by the browser makers, so, they have built a whole process around that. There's a trade body that meets regularly to set rules for CAs to follow, and the CAs are all regularly audited against those rules.
 
-Notice how complex all this is getting! There are organisations, there are rules, there are formal procedures, there are audits, there are protocols, and there is software, and there are organisations full of people doing lots of things to make it all go. Trust worthy verification systems are complex!
+Notice how complex all this is getting! There are organisations, there are rules, there are formal procedures, there are audits, there are protocols, and there is software, and there are organisations full of people doing lots of things to make it all go. Trustworthy verification systems are complex!
 
 But wait, there's more! We haven't gotten to the sharing part yet! How can a website securely and trustworthily share the fact that their server has been verified? Cryptography! The HTTPS cert itself is digitally signed by a CA to attest to the fact that they have received and proof for and checked all the claims encoded in the certificate. The browser maker has added the CA's *root certificate* into their software, so the CA's signature can be cryptographically verified, giving you confidence that the claims the cert asserts are true!
 
@@ -63,7 +63,7 @@ Notice how trust was absolutely central to the whole thing? Many, me included, c
 
 ## Mastodon Verification
 
-Twitter's verification entirely depended on there being a central organisation to trust — Twitter Inc.! Mastodon is a federated system without an obvious central authority where Twitter-style verification could be done, so there is no exact. analogue of Twitter's account verification on Mastodon. However, there are a number of different verified claims possible on the system.
+Twitter's verification entirely depended on there being a central organisation to trust — Twitter, Inc. Mastodon is a federated system without an obvious central authority where Twitter-style verification could be done, so there is no exact analogue of Twitter's account verification on Mastodon. However, there are a number of different verified claims possible on the system.
 
 ### Mastodon Link Verification
 
@@ -76,7 +76,7 @@ What evidence is required?
 To verify your control of a linked site you must add a visible or invisible link from the site back to your profile that meets these simple criteria:
 
 1. The URL in the profile must be secure, i.e. HTTPS
-2. The linked page must contain either visible link (`<a>` tag in the page's `<body>`), or an invisible link (`<link>` tag in the page's `<head>`) with a `href` attribute pointing to the Mastodon profile URL, and a relationship attribubte (`rel`) which contiains the value `me`. E.g.:
+2. The linked page must contain either a visible link (`<a>` tag in the page's `<body>`), or an invisible link (`<link>` tag in the page's `<head>`) with a `href` attribute pointing to the Mastodon profile URL, and a relationship attribute (`rel`) which contains the value `me`, e.g. —
 
 ```html
 <head>
